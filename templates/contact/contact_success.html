@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_assets %}
+    <link href="{% static "css/contact_form.css" %}" rel="stylesheet" />
+{% endblock header_assets %}
+
+{% block content %}
+    <header id="header">
+      {% include 'includes/top-header.html' %}
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Success</h1>
+            <p>We received your proposal, we will contact you soon. Thanks:)</p>
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' with with_hire_us=False%}
+
+{% endblock content %}

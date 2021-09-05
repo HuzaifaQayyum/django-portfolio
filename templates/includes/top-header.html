@@ -1,0 +1,38 @@
+{% load static%}
+
+<div class="container">
+  <a class="navbar-brand" href="{% url 'home' %}">
+    <img
+      src="{% static 'img/favicon.png' %}"
+      width="30"
+      height="30"
+      class="d-inline-block align-top"
+      alt=""
+    />
+    Ummah Devs
+  </a>
+
+  <div class="d-flex justify-content-between">
+    <div class="dropdown">
+      <button
+        class="btn btn-primary dropdown-toggle bg-transparent"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        es-us
+      </button>
+      <div
+        class="dropdown-menu dropdown-menu-dark"
+        aria-labelledby="dropdownMenuButton"
+      >
+        <a class="dropdown-item" href="#">English (us)</a>
+      </div>
+    </div>
+    {% if mobile_nav_button %}
+      <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    {% endif %}
+  </div>
+</div>
