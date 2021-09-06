@@ -102,9 +102,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+
 TIME_ZONE = 'UTC'
 
-USE_I18N = True
+USE_I18N = False
 
 USE_L10N = True
 
@@ -135,6 +136,11 @@ EMAIL_HOST_PASSWORD = '69z25kaZDv1LCnKs'
 EMAIL_USE_TLS = True
 SERVER_EMAIL = 'squad_alien@root.com'
 EMAIL_SUBJECT_PREFIX = '[Portfolio] '
+
+
+# SSL Protection
+# SECURE_SSL_REDIRECT = True
+
 
 ADMINS = [
     ('Huzaifa', 'huzaifaacf@gmail.com')
