@@ -139,7 +139,7 @@ EMAIL_SUBJECT_PREFIX = '[Portfolio] '
 
 
 # SSL Protection
-# SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = True
 
 
 ADMINS = [
