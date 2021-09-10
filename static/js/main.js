@@ -57,10 +57,10 @@ onscroll(document, navbarlinksActive)
 /**
  * Scrolls to an element with header offset
  */
-const scrollto = (el) => {
+const scrollto = (el, marginTop=0) => {
   let elementPos = select(el).offsetTop
   window.scrollTo({
-    top: elementPos,
+    top: elementPos - marginTop,
     behavior: 'smooth'
   })
 }
@@ -104,7 +104,7 @@ on('click', '.scrollto', function (e) {
       navbarToggle.classList.toggle('bi-list')
       navbarToggle.classList.toggle('bi-x')
     }
-    scrollto(this.hash)
+    scrollto(this.hash, document.querySelector('header').offsetHeight)
   }
 }, true)
 
