@@ -3,12 +3,19 @@
 
 
 {% block header_assets %}
-  <link href="{% static "vendor/aos/aos.css" %}" rel="stylesheet" />
+  {% comment %} <link href="{% static "vendor/aos/aos.css" %}" rel="stylesheet" /> {% endcomment %}
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link
       href="{% static "vendor/glightbox/css/glightbox.min.css" %}"
       rel="stylesheet"
     />
-    <link href="{% static "vendor/swiper/swiper-bundle.min.css" %}" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <link href="{% static "css/index.css" %}" rel="stylesheet" />
 {% endblock header_assets %}
 
@@ -61,7 +68,7 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero">
-      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <div class="container" data-aos="zoomIn" data-aos-delay="100">
         <div class="row justify-content-between align-items-center hero__flex-container ">
           <div class="col-lg-6">
             <h1>Ummah Devs</h1>
@@ -966,11 +973,11 @@
     
 {% block lazy_assets %}
 
-  <script src="{% static "vendor/aos/aos.js" %}"></script>
+  {% comment %} <script src="{% static "vendor/aos/aos.js" %}"></script> {% endcomment %}
   <script src="{% static "vendor/glightbox/js/glightbox.min.js" %}"></script>
   <script src="{% static "vendor/isotope-layout/isotope.pkgd.min.js" %}"></script>
   <script src="{% static "vendor/purecounter/purecounter.js" %}"></script>
-  <script src="{% static "vendor/swiper/swiper-bundle.min.js" %}"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="{% static "vendor/typed.js/typed.min.js" %}"></script>
   <script src="{% static "vendor/waypoints/noframework.waypoints.js" %}"></script>
   <script src="{% static "vendor/fluid-simulation/webgl_fluid_simulation.js" %}"></script>
