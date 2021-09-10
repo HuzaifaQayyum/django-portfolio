@@ -113,7 +113,7 @@
       entry.isIntersecting ? (swiper.autoplay.start() && swiper.attachEvents()) : 
                              (swiper.autoplay.stop() && swiper.detachEvents())
     )
-  }, { rootMargin: '10px' }).observe(testimonialSlider)
+  }, { rootMargin: '200px' }).observe(testimonialSlider)
 }
 
 
