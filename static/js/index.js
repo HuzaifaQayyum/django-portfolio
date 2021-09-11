@@ -14,8 +14,9 @@
    });
 
    new IntersectionObserver((entries, observer) => 
-     entries.forEach(entry => entry.isIntersecting ? typed_instance.start() : typed_instance.stop()), {
-       rootMargin: '10px'
+     entries.forEach(entry => entry.isIntersecting ? typed_instance.start() : 
+                                                     typed_instance.stop()), {
+       rootMargin: '30px'
      }).observe(typed)
  }
  
