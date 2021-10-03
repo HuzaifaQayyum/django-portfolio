@@ -1,0 +1,44 @@
+{% load static %}
+
+<section id="hero">
+  <div class="container" data-aos="zoomIn" data-aos-delay="100">
+    <div
+      class="
+        row
+        justify-content-between
+        align-items-center
+        hero__flex-container
+      "
+    >
+      <div class="col-lg-6">
+        <h1>Ummah Devs</h1>
+        <p>
+          We're
+          <span
+            class="typed"
+            data-typed-items="Django, Laravel, .Net, Javascript"
+          ></span>
+          Developer
+        </p>
+        <a
+          class="
+            btn btn-primary
+            button-rounded-lg
+            py-md-3
+            px-md-5
+            py-3
+            px-5
+            mt-md-5 mt-4
+            hero__get-started
+          "
+          href="{% url 'contact:contact-form'%}"
+          >Get Started</a
+        >
+      </div>
+      <div class="col-lg-6">
+        <img src="{% static "img/web-dev.svg" %}" alt="Dealing clients image"
+        class="hero__side-image">
+      </div>
+    </div>
+  </div>
+</section>

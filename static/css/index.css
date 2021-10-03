@@ -32,13 +32,11 @@
   }
 }
 
-
 .nav-menu * {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 
 .nav-menu ul {
   width: 100%;
@@ -182,7 +180,7 @@
 }
 
 .hero__get-started {
-  font-size: clamp(0.8rem, 0.5rem + 1vw, 1.2rem);
+  font-size: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -277,8 +275,6 @@
   }
 }
 
-
-
 /*--------------------------------------------------------------
   # About
   --------------------------------------------------------------*/
@@ -290,7 +286,7 @@
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #728394;
+  color: var(--color-white);
 }
 
 .about .content ul {
@@ -304,13 +300,11 @@
   align-items: center;
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .about .content ul li {
     margin-bottom: 35px;
   }
 }
-
-
 
 .about .content ul strong {
   margin-right: 10px;

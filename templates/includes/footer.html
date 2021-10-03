@@ -1,38 +1,41 @@
 <!-- ======= Footer ======= -->
 <footer
   id="footer"
-  class="footer {% if with_hire_us == False  %}footer-mt-sm{% endif %}"
+  class="footer {% if with_hire_us == False %}footer-mt-sm{% endif %}"
 >
   {% if with_hire_us != False %}
-    <div class="footer__hire-us">
-        <div class="container card-glossy">
-        <div class="row align-items-center gy-3 gy-lg-0">
-            <div class="col-lg-3">
-            <h2 class="fs-3">Start a Project</h2>
-            </div>
-            <div class="col-lg-6">
-            <p>
-                Interested in working together? We should queue up a chat. I’ll buy
-                the coffee.
-            </p>
-            </div>
-            <div class="col-lg-3">
-            <a href="{% url 'contact:contact-form' %}"
-                class="btn btn-primary button-rounded-lg py-md-3 px-md-5 py-2 px-4"
-            >
-                Lets do it
-            </a>
-            </div>
+  <div class="footer__hire-us">
+    <div class="container card-glossy">
+      <div class="row align-items-center gy-3 gy-lg-0">
+        <div class="col-lg-3">
+          <h2 class="fs-3">Start a Project</h2>
         </div>
+        <div class="col-lg-6">
+          <p>
+            Interested in working together? We should queue up a chat. I’ll buy
+            the coffee.
+          </p>
         </div>
+        <div class="col-lg-3">
+          <a
+            href="{% url 'contact:contact-form' %}"
+            class="btn btn-primary button-rounded-lg py-md-3 px-md-5 py-2 px-5"
+          >
+            Lets do it
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
   {% endif %}
 
   <div class="container">
     <h3>Ummah Devs</h3>
     <p>
-      We have experience of years making sites for clients helping boosting their business. You Think We Create!
+      We have experience of years making sites for clients helping boosting
+      their business. You Think We Create!
     </p>
+    {% comment %}
     <div class="social-links">
       <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
       <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -40,6 +43,7 @@
       <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
       <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
     </div>
+    {% endcomment %}
     <div class="copyright">
       &copy; Copyright <strong><span>Ummah Devs</span></strong
       >. All Rights Reserved
