@@ -20,7 +20,8 @@ class ContactView(generic.TemplateView):
     def post(self, request):
         forms_valid, client_form, project_form = ContactService.validate_project_and_client(request)
         if forms_valid:
-            ContactService.save_project_and_send_mail(client_form, project_form)
+            client = client_form.save()
+            project = project_form.save(client=client)
             return HttpResponseRedirect(self.success_url)
 
         return self.render_to_response(self.get_context_data(client_form=client_form, project_form=project_form))
