@@ -1,3 +1,4 @@
+from portfolio.settings.dev import DEBUG
 from .base import *
 import os
 import dj_database_url
@@ -27,6 +28,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -35,8 +37,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
-DATABASES = {
+
+DATABASES = { 
     'default': dj_database_url.config()
 }
 
 SECURE_SSL_REDIRECT = True
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
