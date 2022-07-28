@@ -3,7 +3,6 @@ from django.urls import reverse_lazy
 from django.views import generic
 
 from contact.forms import *
-from contact.service import ContactService
 
 
 class ContactView(generic.TemplateView):
@@ -18,10 +17,13 @@ class ContactView(generic.TemplateView):
         return context
 
     def post(self, request):
-        forms_valid, client_form, project_form = ContactService.validate_project_and_client(request)
-        if forms_valid:
+        client_form = ClientForm(request.POST)
+        project_form = ProjectForm(request.POST)
+
+        
+        if client_form.is_valid() and project_form.is_valid():
             client = client_form.save()
-            project = project_form.save(client=client)
+            project_form.save(client=client)
             return HttpResponseRedirect(self.success_url)
 
         return self.render_to_response(self.get_context_data(client_form=client_form, project_form=project_form))
